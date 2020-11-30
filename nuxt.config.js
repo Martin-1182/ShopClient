@@ -1,6 +1,7 @@
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
+  ssr: true,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -31,7 +32,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/axios'
@@ -39,11 +39,12 @@ export default {
   axios: {
     baseURL: 'http://127.0.0.1:8000/api',
   },
-  env: {
+  /* env: {
     baseUrl: process.env.BASE_URL || 'http://127.0.0.1:8000/api'
-  },
+  }, */
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
 }
+
