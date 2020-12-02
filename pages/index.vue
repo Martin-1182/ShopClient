@@ -1,5 +1,9 @@
 <template>
- <p>home</p>
+  <section>
+    <div class="container mx-auto">
+      <h2>Home</h2>
+    </div>
+  </section>
 </template>
 
 <script>
