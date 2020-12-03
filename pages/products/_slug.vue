@@ -20,7 +20,7 @@
             {{ product.description }}
           </p>
           <div class="mb-6">
-            <form action="">
+            <form>
               <ProductVariation
                 v-for="(variations, type) in product.variations"
                 :type="type"
@@ -34,7 +34,7 @@
           v-if="form.variation"
           class="flex mb-6">
             <span class="text-2xl">{{ product.price }}</span>
-            <form class="flex flex-wrap ml-4" action="">
+            <form class="flex flex-wrap ml-4">
               <div class="w-1/2">
                 <input
                   class="appearance-none block w-full py-2 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded md:rounded-r-none focus:outline-none"
