@@ -2,7 +2,7 @@
   <div class="flex flex-col justify-center items-center max-w-sm mx-auto my-8">
     <nuxt-link
       :to="link"
-      style="background-image: url(https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+      style="background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=762&q=80"
       class="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center"
     >
     </nuxt-link>
