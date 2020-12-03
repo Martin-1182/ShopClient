@@ -5,7 +5,7 @@
     :value="selectedVariationId"
     @change="changed($event, type)"
      class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-      <option>{{ type }}</option>
+      <option value="">Please choose</option>
       <option
         v-for="variation in variations"
         :key="variation.id"

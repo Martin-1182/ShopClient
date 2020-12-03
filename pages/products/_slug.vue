@@ -28,7 +28,6 @@
                 :key="type"
                 v-model="form.variation"
               />
-              {{form}}
             </form>
           </div>
           <div
