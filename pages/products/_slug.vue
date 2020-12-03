@@ -38,20 +38,32 @@
           class="flex mb-6">
             <span class="text-2xl">{{ product.price }}</span>
             <form class="flex flex-wrap ml-4">
-              <div class="w-1/2">
-                <input
-                  class="appearance-none block w-full py-2 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded md:rounded-r-none focus:outline-none"
-                  type="number"
-                  value="1"
-                />
+
+              <div class="w-auto relative flex">
+                <select
+                  name=""
+                  id=""
+                  class="w-32 border border-gray-300 rounded text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+                  v-model="form.quantity"
+
+                >
+                <option
+                  v-for="x in parseInt(form.variation.stock_count)"
+                  :key="x"
+                  :value="x"
+                >
+                {{x}}
+                </option>
+                </select>
               </div>
-              <div class="w-1/2">
+              <div class="">
                 <button
                   class="inline-block w-full py-3 px-4 leading-none text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded md:rounded-l-none"
                 >
                   Buy
                 </button>
               </div>
+
             </form>
           </div>
           <div class="pt-4 border-t">
@@ -76,6 +88,11 @@ export default {
         variation: '',
         quantity: 1
       }
+    }
+  },
+  watch: {
+    'form.variation' () {
+      this.form.quantity = 1
     }
   },
   components: {
