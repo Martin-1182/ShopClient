@@ -10,6 +10,9 @@
           />
         </div>
         <div class="lg:w-1/2 px-4">
+        <span
+        v-if="!product.in_stock"
+        class="bg-red-500 text-white text-xs px-2 py-1 inline-block rounded-full uppercase font-semibold tracking-wide">Out of Stock</span>
           <h2 class="text-4xl mb-4 font-semibold font-heading">
             {{ product.name }}
           </h2>
