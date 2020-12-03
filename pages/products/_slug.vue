@@ -26,12 +26,16 @@
                 :type="type"
                 :variations="variations"
                 :key="type"
+                v-model="form.variation"
               />
+              {{form}}
             </form>
           </div>
-          <div class="flex mb-6">
+          <div
+          v-if="form.variation"
+          class="flex mb-6">
             <span class="text-2xl">{{ product.price }}</span>
-            <div class="flex flex-wrap ml-4">
+            <form class="flex flex-wrap ml-4" action="">
               <div class="w-1/2">
                 <input
                   class="appearance-none block w-full py-2 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded md:rounded-r-none focus:outline-none"
@@ -46,7 +50,7 @@
                   Buy
                 </button>
               </div>
-            </div>
+            </form>
           </div>
           <div class="pt-4 border-t">
             <a class="text-indigo-600 hover:underline" href="#"
@@ -65,8 +69,12 @@ import ProductVariation from "@/components/products/ProductVariation";
 export default {
   data() {
     return {
-      product: null
-    };
+      product: null,
+      form: {
+        variation: '',
+        quantity: 1
+      }
+    }
   },
   components: {
     ProductVariation
