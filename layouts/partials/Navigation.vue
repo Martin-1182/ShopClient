@@ -116,6 +116,12 @@
             class="bg-blue-600 rounded-full w-2 h-2 absolute top-0 right-0"
           ></div>
         </nuxt-link>
+        <template v-if="!$auth.loggedIn">
+          <nuxt-link
+         class="flex items-center hover:text-gray-400 font-semibold"
+         :to="{name: 'auth-signin'}">Sign in
+          </nuxt-link>
+        </template>
       </div>
     </nav>
   </div>
