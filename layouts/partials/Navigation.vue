@@ -84,19 +84,6 @@
         </ul>
       </div>
       <div class="flex items-center space-x-4 text-white">
-        <nuxt-link :to="{}" class="flex items-center hover:text-gray-400">
-          <img
-            alt="@Martin-1182"
-            src="https://avatars0.githubusercontent.com/u/58297666?s=60&amp;v=4"
-            class="w-5 h-5 rounded-full"
-          />
-        </nuxt-link>
-        <nuxt-link
-          :to="{}"
-          class="flex items-center hover:text-gray-400 font-semibold"
-        >
-          Orders
-        </nuxt-link>
         <nuxt-link :to="{}" class="relative hover:text-gray-400">
           <svg
             class="w-4"
@@ -121,6 +108,24 @@
          class="flex items-center hover:text-gray-400 font-semibold"
          :to="{name: 'auth-signin'}">Sign in
           </nuxt-link>
+        </template>
+        <template v-else>
+          <nuxt-link
+          :to="{}"
+          class="flex items-center hover:text-gray-400 font-semibold"
+        >
+          Orders
+        </nuxt-link>
+        <nuxt-link :to="{}" class="flex items-center hover:text-gray-400">
+          <div class="flex items-center hover:text-gray-400 font-semibold pr-2">
+            {{$auth.user.name}}
+            </div>
+          <img
+            alt="@Martin-1182"
+            src="https://avatars0.githubusercontent.com/u/58297666?s=60&amp;v=4"
+            class="w-5 h-5 rounded-full"
+          />
+        </nuxt-link>
         </template>
       </div>
     </nav>
